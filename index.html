@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://jerrymahoney.files.wordpress.com/2013/06/familybook.png" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+
+
+
+            <script>
+                var images = ["https://jerrymahoney.files.wordpress.com/2013/06/familybook.png","https://previews.123rf.com/images/natoushe/natoushe1702/natoushe170200033/72787190-portrait-of-grandfather.jpg","https://previews.123rf.com/images/jemastock/jemastock1806/jemastock180602409/102903968-cute-father-cartoon-vector-illustration-graphic-design.jpg", "https://image.pngaaa.com/93/1309093-middle.png" , "https://image.freepik.com/free-vector/boy-wearing-shirt-with-macau-flag_1308-20549.jpg"];
+            var names = ["Family Book", "Nand Kishor Samota", "Vishal Agarwal","Kusum Agarwal", "Vivaan Agarwal"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 4
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+            </script>
+
+
+
+    </body>
+</html>
